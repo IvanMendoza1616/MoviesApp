@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  background-color: rgb(18, 28, 63);
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+form .title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: white;
+}
+form .title .logo {
+  margin: 0 1rem;
+}
+form #search {
+  margin: 0 0.5rem;
+  width: 120px;
+  padding: 0.5rem 0.5rem;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-family: inherit;
+  color: white;
+  background-color: rgb(29, 44, 99);
+}
+form #search::-moz-placeholder {
+  color: rgb(163, 163, 163);
+}
+form #search:-ms-input-placeholder {
+  color: rgb(163, 163, 163);
+}
+form #search::placeholder {
+  color: rgb(163, 163, 163);
+}
+
+.search-for {
+  width: 100%;
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.movies-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.movies-container .movie {
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  flex-basis: 32%;
+  background-color: rgb(51, 74, 136);
+  position: relative;
+}
+.movies-container .movie img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.movies-container .movie .cover-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 34%, rgba(0, 0, 0, 0) 100%);
+  width: 100%;
+  height: 100%;
+}
+.movies-container .movie .movie-info {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 1rem;
+  width: 80%;
+  color: white;
+}
+.movies-container .movie .movie-info h3 {
+  font-size: 0.9rem;
+}
+.movies-container .movie .movie-info .stats {
+  display: flex;
+  font-size: 0.8rem;
+}
+.movies-container .movie .movie-info .stats i {
+  color: white;
+  margin-left: 0.5rem;
+  padding-right: 0.2rem;
+}
+
+.overlay {
+  z-index: 10;
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  border-radius: 20px;
+  overflow: scroll;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  padding-bottom: 2rem;
+  width: 80%;
+  height: 500px;
+}
+.overlay .overlay-movie {
+  overflow: scroll;
+}
+.overlay .overlay-movie img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 40%;
+}
+.overlay .overlay-movie .overlay-info {
+  color: white;
+  padding: 0 1rem;
+}
+.overlay .overlay-movie .overlay-info .overlay-stats {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+}
+.overlay .overlay-movie .overlay-info .overlay-stats i {
+  margin-right: 0.2rem;
+}
+.overlay .overlay-movie .overlay-info .overlay-description {
+  margin-top: 0.5rem;
+}
+
+.close-btn-container {
+  pointer-events: none;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0);
+  position: fixed;
+  border-radius: 20px;
+  overflow: scroll;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  padding-bottom: 2rem;
+  width: 80%;
+  height: 500px;
+}
+.close-btn-container .close-btn {
+  pointer-events: auto;
+  cursor: pointer;
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  border-radius: 50%;
+  padding: 0.2rem 0.45rem;
+  display: flex;
+}
+
+.overlay-close {
+  cursor: pointer;
+  position: fixed;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+@media (min-width: 550px) {
+  form .title {
+    font-size: 2rem;
+  }
+  form #search {
+    width: 200px;
+    padding: 0.5rem 1rem;
+  }
+  .movie {
+    flex-basis: 24% !important;
+  }
+}/*# sourceMappingURL=styles.css.map */
